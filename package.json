@@ -1,0 +1,11 @@
+{
+  "name": "infographic-report-pdf",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Turn a finished result into a skimmable, reviewed infographic PDF",
+  "type": "module",
+  "dependencies": {
+    "playwright": "1.63.0"
+  }
+}

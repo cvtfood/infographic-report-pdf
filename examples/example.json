@@ -1,0 +1,26 @@
+{
+ "title": "How the report PDF workflow works",
+ "date": "Thu 1 Oct 2026",
+ "pages": [{"blocks": [
+  {"type": "hero", "kicker": "Report PDF workflow · example",
+   "title": "Write boxes, get it reviewed, look at every page, ship.",
+   "subtitle": "A JSON spec becomes a checked, reviewed, one-glance PDF in four commands"},
+  {"type": "callout", "lead": "What's on you:", "text": "Nothing. This page is the example spec; edit it to make your own.", "status": "done"},
+  {"type": "heading", "text": "The guard rails", "sub": "each one is a hard error, not a warning"},
+  {"type": "stats", "items": [
+    {"n": "240", "label": "words at most per page", "status": "info", "icon": "doc"},
+    {"n": "8", "label": "pages at most", "status": "info", "icon": "chart"},
+    {"n": "0", "label": "network requests while rendering", "status": "done", "icon": "shield"},
+    {"n": "100%", "label": "of pages looked at before delivery", "status": "done", "icon": "check"}]},
+  {"type": "heading", "text": "The four steps"},
+  {"type": "roadmap", "items": [
+    {"label": "Step 1", "title": "Write", "body": "Fill fixed boxes with word budgets. The title says the answer.", "status": "done", "badge": "check"},
+    {"label": "Step 2", "title": "Review", "body": "Reviewer commands read the full content; settle every objection.", "status": "done", "badge": "review"},
+    {"label": "Step 3", "title": "Build", "body": "Headless Chrome prints it; overflow and page checks; page pictures.", "status": "running", "badge": "build"},
+    {"label": "Step 4", "title": "Deliver", "body": "Only reviewed content and inspected pages get copied out.", "status": "next", "badge": "deliver"}]},
+  {"type": "heading", "text": "Why it reads fast"},
+  {"type": "cards", "items": [
+    {"title": "Page 1 carries it all", "body": "Headline, the call the reader owes, key numbers, the few boxes that matter.", "status": "info", "icon": "doc"},
+    {"title": "Colours mean something", "body": "Green done, blue running, grey next, red risk, amber watch.", "status": "info", "icon": "chart"}]}
+ ]}]
+}

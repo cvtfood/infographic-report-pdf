@@ -1,0 +1,6 @@
+node_modules/
+.report-pdf/
+build/
+*-build/
+__pycache__/
+*.pdf

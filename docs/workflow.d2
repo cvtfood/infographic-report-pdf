@@ -1,0 +1,28 @@
+direction: down
+title: |md
+  # Report PDF workflow: from a finished result to a PDF someone can skim
+| {near: top-center}
+
+classes: {
+  step: {style: {border-radius: 10; font-size: 18; stroke-width: 2}}
+  gate: {shape: diamond; style: {fill: "#fdecea"; stroke: "#c0392b"; font-size: 15}}
+}
+
+spec: "1. Write the spec\nJSON boxes with word budgets\nhero · callout · stats · cards · road map" {class: step; style.fill: "#e6f4ec"; style.stroke: "#1e8e5a"}
+check: "Budget check\nover budget = build error" {class: gate}
+review: "2. Review\nCodex and Gemini read every field\n(any reviewer command works)" {class: step; style.fill: "#e6f4ec"; style.stroke: "#1e8e5a"}
+settle: "Settle objections\nedit spec, re-review\nif a claim changed" {class: step; style.fill: "#fff6e0"; style.stroke: "#b9770e"}
+build: "3. Build\nheadless Chrome, network blocked\noverflow + page-count checks\none picture per page" {class: step; style.fill: "#e8f0fc"; style.stroke: "#2f6fd6"}
+look: "Look at every page\nrecord one line per page" {class: step; style.fill: "#e8f0fc"; style.stroke: "#2f6fd6"}
+gate: "Deliver gate\nreviewed content?\nevery page inspected?" {class: gate}
+deliver: "4. Deliver\nPDF + editable spec copied out\noptional hook: phone push, upload" {class: step; style.fill: "#eef0f3"; style.stroke: "#5b6675"}
+
+spec -> check
+check -> review: passes
+review -> settle: objections
+settle -> review: claim changed {style.stroke-dash: 4}
+review -> build: agreed
+build -> look
+look -> build: fix and rebuild {style.stroke-dash: 4}
+look -> gate
+gate -> deliver: both yes
